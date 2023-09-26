@@ -3,7 +3,6 @@ package es.ieslosmontecillos.login;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -19,9 +18,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
-public class HelloApplication extends Application {
+public class Login extends Application {
     @Override
     public void start(Stage primaryStage){
         primaryStage.setTitle("JavaFX Welcome");
