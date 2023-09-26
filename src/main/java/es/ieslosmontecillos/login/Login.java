@@ -32,7 +32,8 @@ public class Login extends Application {
 
         //Example 4-3 Controls
         Text scenetitle = new Text("Welcome");
-        scenetitle.setId("welcome-text");
+        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+
         grid.add(scenetitle, 0, 0, 2, 1);
 
         Label userName = new Label("User Name:");
@@ -57,13 +58,15 @@ public class Login extends Application {
         //Example 4-5 Text
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
-        actiontarget.setId("actiontarget");
 
         //Example 4-6 Button Event
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
+
             public void handle(ActionEvent e) {
+
+                actiontarget.setFill(Color.FIREBRICK);
                 actiontarget.setText("Sign in button pressed");
             }
         });
@@ -71,8 +74,6 @@ public class Login extends Application {
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
 
-        scene.getStylesheets().add
-                (Login.class.getResource("Login.css").toExternalForm());
         primaryStage.show();
     }
 
